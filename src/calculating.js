@@ -41,7 +41,7 @@ export const calculatingPoints = () => {
 
 const reusltText = () => {
   const person = document.getElementById('input-person').value
-  const result = document.createElement('h1')
+  const result = document.createElement('h2')
   const ul = document.createElement('ul')
   const liY = document.createElement('li')
   const liX = document.createElement('li')
