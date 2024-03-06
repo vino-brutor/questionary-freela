@@ -1,6 +1,7 @@
 const form = document.getElementById('form')
 const reset = document.getElementById('reset-button')
 const main = document.getElementsByTagName('main')
+const person = document.getElementById('input-person').value
 let question
 let sectionX = 0
 let sectionY = 0
@@ -9,7 +10,6 @@ let resultY = 0
 
 export const calculatingPoints = () => {
   
-  const person = document.getElementById('input-person').value
   for (let index = 1; index < 17; index++) {
     
     if(index % 2 === 0){
@@ -40,15 +40,19 @@ export const calculatingPoints = () => {
 
 
 const reusltText = () => {
+  const submitButton = document.getElementById('submit')
   const person = document.getElementById('input-person').value
   const result = document.createElement('h2')
   const ul = document.createElement('ul')
   const liY = document.createElement('li')
   const liX = document.createElement('li')
 
-  result.innerText = ('O entrevistado' ?? person) + ' atingiu a seguinte pontuação: '
+  console.log(person)
+  result.innerText = (person ?? 'O entrevistado') + ' atingiu a seguinte pontuação: '
   liX.innerText = 'Seção X: ' + resultX + '%'
   liY.innerText = 'Seção Y: ' + resultY + '%'
+
+  submitButton.disabled =true
 
   form.appendChild(result)
   result.appendChild(ul)
