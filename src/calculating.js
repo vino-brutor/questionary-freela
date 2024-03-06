@@ -46,7 +46,7 @@ const reusltText = () => {
   const liY = document.createElement('li')
   const liX = document.createElement('li')
 
-  result.innerText = ('o entrevistado' ?? person) + ' atingiu a seguinte pontuação: '
+  result.innerText = ('O entrevistado' ?? person) + ' atingiu a seguinte pontuação: '
   liX.innerText = 'Seção X: ' + resultX + '%'
   liY.innerText = 'Seção Y: ' + resultY + '%'
 
