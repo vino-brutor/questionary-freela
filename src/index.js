@@ -1,3 +1,5 @@
+import '../babel.config.js'
+import './style.css'
 import { resetFunction } from './reset.js'
 import { calculatingPoints } from './calculating.js'
 const reset = document.getElementById('reset-button')
